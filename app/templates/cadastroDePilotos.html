@@ -1,0 +1,19 @@
+<HTML>
+    {% set mensagem = get_flashed_messages() %}
+    {% if mensagem %} 
+        <div class="alert alert-danger" role="alert">
+            {{ mensagem[0] }}
+        </div>
+    {% endif %}
+<form action="cadastrarPiloto" method="POST">
+<input type="text" name="nome" placeholder="Nome"/>
+<input type="text" name="cpf" placeholder="CPF"/>
+<input type="text" name="rg" placeholder="RG"/>
+<input type="text" name="data_nascimento" placeholder="data_nascimento"/>
+<input type="text" name="telefone_contato" placeholder="telefone_contato"/>
+<input type="email" name="email" placeholder="email"/>
+<input type="text" name="contato_emergencia" placeholder="contato_emergencia"/>
+<input type="submit" value="Cadastrar"/>
+</form>
+
+</HTML>

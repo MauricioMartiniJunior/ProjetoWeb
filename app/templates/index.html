@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <a href="./cadastroDePilotos">cadastro</a>
+</head>
+<body>
+    {% set mensagem = get_flashed_messages() %}
+    {% if mensagem %}
+        <div class="alert alert-success" role="alert">
+                {{ mensagem[0] }}
+        </div>
+    {% endif %}  
+
+</body>
+</html>

@@ -5,7 +5,7 @@ CREATE TABLE cadastro_pilotos ( user_id BIGINT NOT NULL AUTO_INCREMENT, nome VAR
 
 #TABELA DE CORRIDA
 
-CREATE TABLE tabela_calendario_corrida ( user_id BIGINT NOT NULL AUTO_INCREMENT, data_corrida VARCHAR(45) NULL, local_corrida VARCHAR(45) NULL, hora_corrida(44) NULL, PRIMARY KEY (user_id));
+CREATE TABLE tabela_calendario_corrida ( id_corrida BIGINT NOT NULL PRIMARY KEY, data_corrida VARCHAR(45) NULL, local_corrida VARCHAR(45) NULL, hora_corrida(44) NULL, PRIMARY KEY (id_corrida));
 
 
 #TABELA DE CLASSIFICAÇÃO DOS PILOTOS 

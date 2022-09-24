@@ -1,11 +1,10 @@
 # TABELA DE CADASTRO DOS PILOTOS
 
-CREATE TABLE cadastro_pilotos ( user_id BIGINT NOT NULL AUTO_INCREMENT, nome VARCHAR(45) NULL, cpf VARCHAR(45) NULL, rg VARCHAR(45) NULL, data_nascimento VARCHAR(45) NULL, telefone_contato VARCHAR(45) NULL, email VARCHAR(45) NULL, contato_emergencia VARCHAR(45) NULL, comprovante_pagamento VARCHAR(45) NULL, PRIMARY KEY (user_id));
+CREATE TABLE cadastro_pilotos ( user_id BIGINT NOT NULL AUTO_INCREMENT, nome VARCHAR(100) NULL, cpf VARCHAR(11) NULL, rg VARCHAR(10) NULL, data_nascimento VARCHAR(8) NULL, telefone_contato VARCHAR(12) NULL, email VARCHAR(100) NULL, contato_emergencia VARCHAR(12) NULL, comprovante_pagamento VARCHAR(100) NULL, PRIMARY KEY (user_id));
 
 
 #TABELA DE CORRIDA
-
-CREATE TABLE tabela_calendario_corrida ( id_corrida BIGINT NOT NULL PRIMARY KEY, data_corrida VARCHAR(45) NULL, local_corrida VARCHAR(45) NULL, hora_corrida(44) NULL, PRIMARY KEY (id_corrida));
+CREATE TABLE tabela_calendario_corrida ( id_corrida BIGINT NOT NULL AUTO_INCREMENT, data_corrida VARCHAR(50) NULL, local_corrida VARCHAR(50) NULL, hora_corrida VARCHAR(6) NULL, PRIMARY KEY (id_corrida));
 
 
 #TABELA DE CLASSIFICAÇÃO DOS PILOTOS 

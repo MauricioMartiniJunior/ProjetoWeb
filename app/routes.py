@@ -65,8 +65,11 @@ def editar_calendario():
     cursor.execute('insert into cadastro_pilotos (etapa, data, local)'
                    'VALUES (%s, %s, %s,)', (etapa, data, local))
     conn.commit()'''
-    flash('sucess')
-    return render_template('calendario.html', lista=lista)
+    if len(lista) == 3: 
+        flash('sucess')
+        return render_template('calendario.html', lista=lista)
+    return render_template('calendario.html')
+    
 
 
 @app.route('/calendario', methods=['GET'])

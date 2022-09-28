@@ -1,0 +1,101 @@
+*
+{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background-color:grey
+}
+
+.cabelhoNavegacao
+{
+	height: 40px;
+	background-color: rgb(195, 47, 47);
+	box-shadow: 0px 10px 10px  #442222;		
+	font-size: 10px;
+	font-weight:bolder; 
+	
+	font-family:"Titillium Web"
+}
+
+.logo
+{
+	width:80px;
+	margin-top:0px; 
+	background-color: rgb(145, 132, 150); 
+	float: left;
+}
+
+.cadastropiloto
+{
+	width: 700px;
+	margin: 0 auto;
+	box-shadow: 0px 0px 5px 2px  #827171;
+	background-color: #f4eeee;
+}
+.titulo
+{
+	text-align: center;
+}
+.cadastrarcorrida{
+	font-size: 30px;
+	width: 800px;
+	margin: 0 auto;
+	box-shadow: 0px 0px 5px 2px  #827171;
+	background-color: #993e3e0e;
+}
+
+
+.teste{
+	transition: 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    padding: 0px 10px 0px 10px;
+}
+
+.cal{
+	display: inline;
+	text-align: center;
+	font-size: 10px;
+	width: 500px;
+	margin: 0 auto;
+	box-shadow: 0px 0px 5px 2px  #827171;
+	background-color: #e91515;
+
+}
+
+.fi{
+	height: 20px;
+	margin: 5px;;
+}
+.footer{
+	
+	margin-inline-end: auto;
+	text-align: center;
+}
+.h2{
+	text-align: center;
+	font-style: italic;
+	background-color: white;
+}
+.centro{
+	font-size: 30px;
+	width: 800px;
+	margin: 0 auto;
+	box-shadow: 0px 0px 5px 2px  #827171;
+
+	background-color: #993e3e0e;
+}
+.h1{
+	text-align: center;
+}
+
+.form-group{
+	font-size: 20px;
+
+}
+
+#carouselExampleFade{
+	display: inline-flexbox;
+}

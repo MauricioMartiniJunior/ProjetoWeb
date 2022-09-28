@@ -69,5 +69,9 @@ def editar_calendario():
     return render_template('calendario.html', lista=lista)
 
 
+@app.route('/calendario', methods=['GET'])
+def calendario():
+    return render_template('/calendario.html')
+
 if __name__ == '__main__':
-    app.run(host='localhost', port=5002, debug=True)
+    app.run(host='localhost', port=5008, debug=True)

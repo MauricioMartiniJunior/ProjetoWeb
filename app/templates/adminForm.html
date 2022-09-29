@@ -1,0 +1,15 @@
+<HTML>
+    {% set mensagem = get_flashed_messages() %}
+    {% if mensagem %} 
+        <div class="alert alert-danger" role="alert">
+            {{ mensagem[0] }}
+        </div>
+    {% endif %}
+    <form action="/adminAcess" method="POST">
+        <input type="text" name="nome" placeholder="Nome"/>
+        <input type="password" name="senha" placeholder="Senha"/>
+        <input type="email" name="email" placeholder="e-mail"/>
+        <input type="submit" value="Entrar"/>
+    </form>
+
+</HTML>

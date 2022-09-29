@@ -19,6 +19,16 @@ def main():
     return render_template('index.html')
 
 
+@app.route('/calendario', methods=['GET'])
+def calendario():
+    return render_template('/calendario.html')
+
+
+@app.route('/adminLogin', methods=['GET'])
+def admin_config():
+    return render_template('/adminForm.html')
+
+
 @app.route('/cadastrarPiloto', methods=['POST'])
 def cadastroPiloto():
     nome = request.form['nome']
@@ -45,13 +55,16 @@ def cadastro_form():
     return render_template('/cadastroDePilotos.html')
 
 
-@app.route('/admin', methods=['POST', 'GET'])
+@app.route('/adminAcess', methods=['POST', 'GET'])
 def admin():
-    name = request.args.get('name')
-    senha = request.args.get('senha')
-    if name == 'Junior' and senha == '12345':
+    nome = request.form.get('nome')
+    email = request.form.get('email')
+    senha = request.form.get('senha')
+    if nome == 'Junior' and senha == '12345' and email == "motoca@muitoloucos.com":
         return render_template('adminConfig.html')
 
+    flash('Dados inválidos')
+    return render_template('adminForm.html')
 
 @app.route('/editarCalendario', methods=['POST', 'GET'])
 def editar_calendario():
@@ -59,19 +72,19 @@ def editar_calendario():
     data = request.form['data']
     local = request.form['local']
     lista =[etapa,data,local]
-    '''conn = mysql.connect()
-    cursor = conn.cursor()
+    if etapa and data and local and lista:
+        '''conn = mysql.connect()
+        cursor = conn.cursor()
 
-    cursor.execute('insert into cadastro_pilotos (etapa, data, local)'
+        cursor.execute('insert into cadastro_pilotos (etapa, data, local)'
                    'VALUES (%s, %s, %s,)', (etapa, data, local))
-    conn.commit()'''
-    flash('sucess')
-    return render_template('calendario.html', lista=lista)
+        conn.commit()'''
+        flash('Cadastro feito com sucesso')
+        return render_template('adminConfig.html')
+    flash('erro')
+    return render_template('adminConfig.html')    
 
 
-@app.route('/calendario', methods=['GET'])
-def calendario():
-    return render_template('/calendario.html')
 
 if __name__ == '__main__':
     app.run(host='localhost', port=5008, debug=True)

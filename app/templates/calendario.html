@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 		<title>Calendario</title>
-		<link rel="stylesheet" type="text/css" href="ic/css/estilo.css">
+		<link rel="stylesheet" type="text/css"href="../static/css/estilo.css">
    
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -23,26 +23,27 @@
 		<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 	</head>
-
+	{% if mensagem %} 
+        <div class="alert alert-danger" role="alert">
+            {{ mensagem[0] }}
+        </div>
+    {% endif %}
 
 	<body style="background-color: rgb(56, 52, 52) ;">
 		
 		<div class="centroNavegacao">
 			<header class="cabelhoNavegacao">
 				<div class="logo">
-				    <a href="calendario.html"><img src="../static/assets/imagem/2.png" style="height: 40px" width="80px" ></a>
+				    <img src="../static/imagem/2.png" style="height: 80px" width="100px" ></a>
 				</div>
 
 				<div class="navegacao">
 					<nav class="nav nav-pills nav-fill">
-						  <a style="color:white;"class="nav-item nav-link">Categorias</a>
-						  <a style="color:white;"class="nav-item nav-link" href="cadastrar_corrida.html">Increva-se</a>
-						  <a style="color:white;"class="nav-item nav-link" >Lojas</a>
-						  <a href="cadastrar_corrida.html"><img src="../static/assets/imagem/7.png" class="fi fi-ss-user" width="25" height="20"></a>
-						  <img src="../static/assets/imagem/whatsapp (1).png" class="fi fi-ss-user" width="25" height="20">
-						  <a href="https://www.instagram.com/juninhotrudes/?hl=pt-br" ><img src="../static/assets/imagem/instagram.png" class="fi fi-ss-user" width="25" height="20"></a>
-						  <a href="https://www.facebook.com/juninhotrudes72" ><img src="../static/assets/imagem/facebook.png" class="fi fi-ss-user" width="25" height="20"></a>
-
+						  <a style="color:white; margin-top: 20px;font-size: 20px;"class="nav-item nav-link">Categorias</a>
+						  <a style="color:white;margin-top: 20px;font-size: 20px;"class="nav-item nav-link" href="cadastro_piloto.html">Increva-se</a>
+						  <a style="color:white;margin-top: 20px;font-size: 20px;"class="nav-item nav-link" >Lojas</a>
+						  <a style="color:white;margin-top: 20px;font-size: 20px;"class="nav-item nav-link" href="adminLogin">Admin</a>
+						
 					</nav>
 				</div>
 			</header>
@@ -51,10 +52,10 @@
 		<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
 			<div class="carousel-inner">
 			  <div class="carousel-item active">
-				<img src="../static/assets/imagem/h.jpg" height="200px" class="d-block w-100" alt="...">
+				<img src="../static/imagem/h.jpg" height="400px" class="d-block w-100" alt="...">
 			  </div>
 			  <div class="carousel-item">
-				<img src="../static/assets/imagem/f.jpg" height="200px" class="d-block w-100" alt="...">
+				<img src="../static/imagem/f.jpg" height="400px" class="d-block w-100" alt="...">
 			  </div>
 			</div>
 			<button class="carousel-control-prev" type="button" data-target="#carouselExampleFade" data-slide="prev">
@@ -67,35 +68,37 @@
 			</button>
 		  </div>
 
-		  <h2 class="h2">Calendário</h2>
+		  <h2 class="h2" style="font-size: 30px;">Calendário</h2>
 <div class="cal">
+
 <table class="table table-dark">
 	  <tr>
-		<td class="t" style="color: red; width: 5px">|</td><td >{{ lista[0] }}</td><td class="t" style="color: green; width: 5px">|</td>
-		<td colspan="2" class="table-active">{{ lista[1] }}</td>
-		<td class="t" style="color: green; width: 5px">|</td><td>{{ lista[2] }} </td><td class="t" style="color: red; width: 5px">|</td>
+		<td class="t" style="color: red; width: 5px" >|</td><td class="et1" style="font-size: 20px">1ª Etapa</td><td class="t" style="color: green; width:5px">|</td>
+		<td colspan="k" class="table-active" style="font-size: 20px">Kartódromo Registro</td>
+		<td class="t" style="color: green; width: 5px">|</td><td class="et1" style="font-size: 20px">12 a 20 Abril </td><td class="t" style="color: red; width: 5px">|</td>
 	  </tr>
 	</tbody>
 
+
 	<tr>
-		<td class="t" style="color: green; width: 5px">|</td><td >2ª Etapa</td><td class="t" style="color: red; width: 5px">|</td>
-		<td colspan="2" class="table-active">Kartódromo Regidtro</td>
-		<td class="t" style="color: red; width: 5px">|</td><td>1 a 20 de Abril</td><td class="t" style="color: green; width: 5px">|</td>
+		<td class="t" style="color: green; width: 5px">|</td><td class="et2" style="font-size: 20px" >2ª Etapa</td><td class="t" style="color: red; width: 5px">|</td>
+		<td colspan="k" class="table-active" style="font-size: 20px">Kartódromo Regidtro</td>
+		<td class="t" style="color: red; width: 5px">|</td><td style="font-size: 20px">1 a 20 de Abril</td><td class="t" style="color: green; width: 5px">|</td>
 	  </tr>
 	</tbody>
 
 	
 	<tr>
-		<td class="t" style="color: red; width: 5px">|</td><td >3ª Etapa</td><td class="t" style="color: green; width: 5px">|</td>
-		<td colspan="2" class="bg-success">Kartódromo Regidtro</td>
-		<td class="t" style="color: green; width: 5px">|</td><td>16 a 20 de Outubro</td><td class="t" style="color: red; width: 5px">|</td>
+		<td class="t" style="color: red; width: 5px">|</td><td class="et3" style="font-size: 20px">3ª Etapa</td><td class="t" style="color: green; width: 5px">|</td>
+		<td colspan="k" class="bg-success" style="font-size: 20px">Kartódromo Regidtro</td>
+		<td class="t" style="color: green; width: 5px" >|</td><td  style="font-size: 20px">16 a 20 de Outubro</td><td class="t" style="color: red; width: 5px">|</td>
 	  </tr>
 	</tbody>
 
 	<tr>
-		<td class="t" style="color:green; width: 5px">|</td>	<td >4ª Etapa</td><td class="t" style="color: red; width: 5px">|</td>
-		<td colspan="2" class="table-active">Kartódromo Regidtro</td>
-		<td class="t" style="color: red; width: 5px">|</td><td> 1 a 20 de Novembro</td><td class="t" style="color: green; width: 5px">|</td>
+		<td class="t" style="color:green; width: 5px">|</td><td class="et4" style="font-size: 20px">4ª Etapa</td><td class="t" style="color: red; width: 5px">|</td>
+		<td colspan="k" class="table-active" style="font-size: 20px">Kartódromo Regidtro</td>
+		<td class="t" style="color: red; width: 5px">|</td><td class="et4" style="font-size: 20px"> 1 a 20 de Novembro</td><td class="t" style="color: green; width: 5px">|</td>
 	  </tr>
 	</tbody>
 
@@ -103,9 +106,9 @@
 
 		<tr>
 			<td class="t" style="color:red
-			; width: 5px">|</td>	<td >5ª Etapa</td><td class="t" style="color: green; width: 5px">|</td>
-			<td colspan="2" class="table-active">Kartódromo Regidtro</td>
-			<td class="t" style="color: green; width: 5px">|</td><td> 1 a 20 de Dezembro</td><td class="t" style="color: red; width: 5px">|</td>
+			; width: 5px">|</td>	<td class="et5" style="font-size: 20px">5ª Etapa</td><td class="t" style="color: green; width: 5px">|</td>
+			<td colspan="k" class="table-active" style="font-size: 20px">Kartódromo Regidtro</td>
+			<td class="t" style="color: green; width: 5px">|</td><td class="et5" style="font-size: 20px"> 1 a 20 de Dezembro</td><td class="t" style="color: red; width: 5px">|</td>
 		  </tr>
 		</tbody>
 	
@@ -113,11 +116,19 @@
 		<tr>
   </table>
 
+
 </div>
+<div>
+	<img src="../static/imagem/whatsapp (1).png" class="fi fi-ss-user" width="25" height="20">
+	<a href="https://www.instagram.com/juninhotrudes/?hl=pt-br" ><img src="../static/imagem/instagram.png" class="fi fi-ss-user" width="25" height="20"></a>
+	<a href="https://www.facebook.com/juninhotrudes72" ><img src="../static/imagem/facebook.png" class="fi fi-ss-user" width="25" height="20"></a>
+
+</div>
+
 </body>
 <footer class="footer" style="background-color: aliceblue;">
 	<small style="color: black;">Copyright © 2022 Juninho Trudes 72 </small>
-	
-	</footer>
+
+</footer>
 </html>
 

@@ -60,7 +60,8 @@ def admin():
     nome = request.form.get('nome')
     email = request.form.get('email')
     senha = request.form.get('senha')
-    if nome == 'Junior' and senha == '12345' and email == "motoca@muitoloucos.com":
+    #deixaremos esta senha gravada no banco para fazer a validaçao
+    if nome == 'Junior' and senha == '12345' and email == "motoca@muitoloucos.com": 
         return render_template('adminConfig.html')
 
     flash('Dados inválidos')
@@ -71,8 +72,8 @@ def editar_calendario():
     etapa = request.form['etapa']
     data = request.form['data']
     local = request.form['local']
-    lista =[etapa,data,local]
-    if etapa and data and local and lista:
+    lista =[etapa,local,data]
+    if etapa and data and local:
         '''conn = mysql.connect()
         cursor = conn.cursor()
 
@@ -80,7 +81,7 @@ def editar_calendario():
                    'VALUES (%s, %s, %s,)', (etapa, data, local))
         conn.commit()'''
         flash('Cadastro feito com sucesso')
-        return render_template('adminConfig.html')
+        return render_template('calendario.html', lista=lista)#mudar para json para o calendario dinamico
     flash('erro')
     return render_template('adminConfig.html')    
 

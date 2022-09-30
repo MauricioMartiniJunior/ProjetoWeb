@@ -23,11 +23,6 @@
 		<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 	</head>
-	{% if mensagem %} 
-        <div class="alert alert-danger" role="alert">
-            {{ mensagem[0] }}
-        </div>
-    {% endif %}
 
 	<body style="background-color: rgb(56, 52, 52) ;">
 		
@@ -70,53 +65,38 @@
 
 		  <h2 class="h2" style="font-size: 30px;">Calendário</h2>
 <div class="cal">
-
 <table class="table table-dark">
-	  <tr>
-		<td class="t" style="color: red; width: 5px" >|</td><td class="et1" style="font-size: 20px">1ª Etapa</td><td class="t" style="color: green; width:5px">|</td>
-		<td colspan="k" class="table-active" style="font-size: 20px">Kartódromo Registro</td>
-		<td class="t" style="color: green; width: 5px">|</td><td class="et1" style="font-size: 20px">12 a 20 Abril </td><td class="t" style="color: red; width: 5px">|</td>
-	  </tr>
-	</tbody>
-
-
 	<tr>
-		<td class="t" style="color: green; width: 5px">|</td><td class="et2" style="font-size: 20px" >2ª Etapa</td><td class="t" style="color: red; width: 5px">|</td>
-		<td colspan="k" class="table-active" style="font-size: 20px">Kartódromo Regidtro</td>
-		<td class="t" style="color: red; width: 5px">|</td><td style="font-size: 20px">1 a 20 de Abril</td><td class="t" style="color: green; width: 5px">|</td>
-	  </tr>
-	</tbody>
-
+		<td class="t" style="color: red; width: 5px" >|</td><td class="et1" style="font-size: 20px">1ª Etapa</td><td class="t" style="color: green; width:5px">|</td>
+		<td colspan="k" class="table-active" class="et1" style="font-size: 20px">Kartódromo Registro</td>
+		<td class="t" style="color: green; width: 5px">|</td><td class="et1" style="font-size: 20px">12 a 20 Abril </td><td class="t" style="color: red; width: 5px">|</td>
+	</tr>
 	
 	<tr>
+		<td class="t" style="color: green; width: 5px">|</td><td class="et2" style="font-size: 20px" >2ª Etapa</td><td class="t" style="color: red; width: 5px">|</td>
+		<td colspan="k" class="table-active" style="font-size: 20px">Kartódromo Registro</td>
+		<td class="t" style="color: red; width: 5px">|</td><td style="font-size: 20px">1 a 20 de Abril</td><td class="t" style="color: green; width: 5px">|</td>
+	</tr>
+		
+	<tr>
 		<td class="t" style="color: red; width: 5px">|</td><td class="et3" style="font-size: 20px">3ª Etapa</td><td class="t" style="color: green; width: 5px">|</td>
-		<td colspan="k" class="bg-success" style="font-size: 20px">Kartódromo Regidtro</td>
+		<td colspan="k" class="bg-success" style="font-size: 20px">Kartódromo Registro</td>
 		<td class="t" style="color: green; width: 5px" >|</td><td  style="font-size: 20px">16 a 20 de Outubro</td><td class="t" style="color: red; width: 5px">|</td>
-	  </tr>
-	</tbody>
+    </tr>
 
 	<tr>
 		<td class="t" style="color:green; width: 5px">|</td><td class="et4" style="font-size: 20px">4ª Etapa</td><td class="t" style="color: red; width: 5px">|</td>
-		<td colspan="k" class="table-active" style="font-size: 20px">Kartódromo Regidtro</td>
+		<td colspan="k" class="table-active" style="font-size: 20px">Kartódromo Registro</td>
 		<td class="t" style="color: red; width: 5px">|</td><td class="et4" style="font-size: 20px"> 1 a 20 de Novembro</td><td class="t" style="color: green; width: 5px">|</td>
-	  </tr>
-	</tbody>
-
-	<tr>
-
-		<tr>
-			<td class="t" style="color:red
-			; width: 5px">|</td>	<td class="et5" style="font-size: 20px">5ª Etapa</td><td class="t" style="color: green; width: 5px">|</td>
-			<td colspan="k" class="table-active" style="font-size: 20px">Kartódromo Regidtro</td>
-			<td class="t" style="color: green; width: 5px">|</td><td class="et5" style="font-size: 20px"> 1 a 20 de Dezembro</td><td class="t" style="color: red; width: 5px">|</td>
-		  </tr>
-		</tbody>
+	</tr>
 	
-		
-		<tr>
+	<tr>{% if lista %}
+		<td class="t" style="color:red; width: 5px">|</td>	<td class="et5" style="font-size: 20px">{{ lista[0] }}</td><td class="t" style="color: green; width: 5px">|</td>
+		<td colspan="k" class="table-active" style="font-size: 20px">{{ lista[1] }}</td>
+		<td class="t" style="color: green; width: 5px">|</td><td class="et5" style="font-size: 20px"> {{ lista[2] }}</td><td class="t" style="color: red; width: 5px">|</td>
+	</tr> {% endif %}
+
   </table>
-
-
 </div>
 <div>
 	<img src="../static/imagem/whatsapp (1).png" class="fi fi-ss-user" width="25" height="20">

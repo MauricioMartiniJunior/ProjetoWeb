@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # TABELA DE CADASTRO DOS PILOTOS
 
 CREATE TABLE cadastro_pilotos ( user_id BIGINT NOT NULL AUTO_INCREMENT, nome VARCHAR(45) NULL, cpf VARCHAR(45) NULL, rg VARCHAR(45) NULL, data_nascimento VARCHAR(45) NULL, telefone_contato VARCHAR(45) NULL, email VARCHAR(45) NULL, contato_emergencia VARCHAR(45) NULL, comprovante_pagamento VARCHAR(45) NULL, PRIMARY KEY (user_id));
@@ -16,3 +17,22 @@ CREATE TABLE tabela_classificação_pilotos( (# A PRIMARY KEY DA TABELA SERA A P
 
 
 
+=======
+# TABELA DE CADASTRO DOS PILOTOS
+
+CREATE TABLE cadastro_pilotos ( user_id BIGINT NOT NULL AUTO_INCREMENT, nome VARCHAR(100) NULL, cpf VARCHAR(11) NULL, rg VARCHAR(10) NULL, data_nascimento VARCHAR(8) NULL, telefone_contato VARCHAR(12) NULL, email VARCHAR(100) NULL, contato_emergencia VARCHAR(12) NULL, comprovante_pagamento VARCHAR(100) NULL, PRIMARY KEY (user_id));
+
+
+#TABELA DE CORRIDA
+CREATE TABLE tabela_calendario_corrida ( id_corrida BIGINT NOT NULL AUTO_INCREMENT, data_corrida VARCHAR(50) NULL, local_corrida VARCHAR(50) NULL, hora_corrida VARCHAR(6) NULL, PRIMARY KEY (id_corrida));
+
+
+#TABELA DE CLASSIFICAÇÃO DOS PILOTOS 
+
+CREATE TABLE tabela_classificação_pilotos( (# A PRIMARY KEY DA TABELA SERA A PRIMARY KEY DA CORRIDA) posição_classificacao VARCHAR(20) NULL, numero_do_piloto VARCHAR(100), nome_piloto VARCHAR(50) NULL, pontuacao_por_etapas VARCHAR(50) NULL, total_geral_da_classificacao VARCHAR(50) NULL)
+
+
+
+
+
+>>>>>>> main

@@ -1,19 +1,117 @@
-<HTML>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Piloto</title>
+</head>
+
+<body>
     {% set mensagem = get_flashed_messages() %}
-    {% if mensagem %} 
-        <div class="alert alert-danger" role="alert">
-            {{ mensagem[0] }}
-        </div>
+    {% if mensagem %}
+    <div class="alert alert-danger" role="alert">
+        {{ mensagem[0] }}
+    </div>
     {% endif %}
+    <script src="https://kit.fontawesome.com/db3a9100e9.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../static/css/estilo.css">
+    <div class="cadastropiloto">
+        <h1 class="titulo"> Cadastro Para Piloto </h1>
+        <form action="cadastrarPiloto" method="post">
+            <!-- para usa o mysql essa linha-->
+            <div class="form-group">
+                <label>Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" maxlength="80" required>
+            </div>
+            <div class="form-group">
+                <label>CPF</label>
+                <input type="text" class="form-control" id="cpf" name="cpf" placeholder="Digite seu CPF" maxlength="15" required>
+            </div>
+            <div class="form-group">
+                <label>Telefone</label>
+                <input type="text" class="form-control" id="telefone_contato" name="telefone_contato" placeholder="Telefone" maxlength="15" required>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail"maxlength="70" required>
+            </div>
+            <div class="form-group">
+                <label>RG</label>
+                <input type="text" class="form-control" id="rg" name="rg" placeholder="Digite seu RG" maxlength="15" required>
+            </div>
+            <div class="form-group">
+                <label>Data Nascimento</label>
+                <input type="date" class="form-control" id="data_nascimento" name="data_nascimento"
+                    placeholder="Digite sua data de nascimento" maxlength="10" required>
+            </div>
+            <div class="form-group">
+                <label>Contado de Emergência</label>
+                <input type="text" class="form-control" id="contato_emergencia" name="contato_emergencia"placeholder="Digite Contado de Emergência" maxlength="15" required>
+            </div>
+            <div>
+                <label>Senha</label><br>
+                <input type="password" style="height: 37px; width:50%; float: left;" size="70" id="senha"
+                    name="senha" placeholder="Digite sua senha" maxlength="8" required="">
+                <div>
+                    <!-- botao do olho-->
+                    <button type="button" onclick="mostrarSenha()"><i class="far fa-eye fa-2x"></i></button>
+                </div><br>
+                <br>
+                <button type="submit" class="btn btn-outline-primary"
+                    title="Envia as informações para o banco de dados">Enviar</button>
+                <button type="reset" class="btn btn-outline-danger"
+                    title="Apaga as informações do formulario">Apagar</button>
+                <button type="button" class="btn btn-outline-success" title="Fecha o formulario"><a
+                        href="./calendario">Fechar</button></a>
+        </form>
+        <!--esse script é para mostra a senha-->
+        <script type="text/javascript">
+            function mostrarSenha() {
+                var tipo = document.getElementById('senha');
+
+                if (tipo.type == "password") {
+
+                    tipo.type = "text";
+                }
+
+                else {
+                    tipo.type = "password";
+                }
+            }
+        </script>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+<!-- 
+</html>
+<ht>
+{% set mensagem = get_flashed_messages() %}
+{% if mensagem %}
+<div class="alert alert-danger" role="alert">
+    {{ mensagem[0] }}
+</div>
+{% endif %}
 <form action="cadastrarPiloto" method="POST">
-<input type="text" name="nome" placeholder="Nome"/>
-<input type="text" name="cpf" placeholder="CPF"/>
-<input type="text" name="rg" placeholder="RG"/>
-<input type="text" name="data_nascimento" placeholder="data_nascimento"/>
-<input type="text" name="telefone_contato" placeholder="telefone_contato"/>
-<input type="email" name="email" placeholder="email"/>
-<input type="text" name="contato_emergencia" placeholder="contato_emergencia"/>
-<input type="submit" value="Cadastrar"/>
+    <input type="text" name="nome" placeholder="Nome" />
+    <input type="text" name="cpf" placeholder="CPF" />
+    <input type="text" name="rg" placeholder="RG" />
+    <input type="text" name="data_nascimento" placeholder="data_nascimento" />
+    <input type="text" name="telefone_contato" placeholder="telefone_contato" />
+    <input type="email" name="email" placeholder="email" />
+    <input type="text" name="contato_emergencia" placeholder="contato_emergencia" />
+    <input type="submit" value="Cadastrar" /> -->
 </form>
 
-</HTML>
+</html>

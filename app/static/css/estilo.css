@@ -1,0 +1,148 @@
+*
+{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 16px;
+}
+body{
+	background-color:grey	
+}
+.cabelhoNavegacao
+{
+	height: 80px;
+	background-color: rgb(211, 50, 50);
+	box-shadow: 0px 10px 10px  #442222;		
+	font-size: 10px;
+	
+}
+
+.logo
+{
+	width:0px;
+	margin-top:0px; 
+	background-color: rgb(145, 132, 150); 
+	float: left;
+}
+
+.cadastropiloto
+{
+	width: 700px;
+	margin: 0 auto;
+	box-shadow: 0px 0px 5px 2px  #827171;
+	background-color: #f4eeee;
+}
+.titulo
+{
+	text-align: center;
+}
+.cadastrarcorrida{
+	font-size: 30px;
+	width: 800px;
+	margin: 0 auto;
+	box-shadow: 0px 0px 5px 2px  #827171;
+	background-color: #993e3e0e;
+}
+
+.cal{
+	text-align: center;
+	font-size: 10px;
+	width: 900px;
+	height: 300px;
+	margin: 0 auto;
+	box-shadow: 0px 0px 5px 2px  #827171;
+	background-color: #15e935;
+
+}
+.table{
+	height: 300px;
+}
+
+.fi{
+	height: 20px;
+	margin: 5px;
+}
+.footer{
+text-align: center;
+font-style:italic ;
+height: 50px;
+font-size: 20px;
+}
+.h2{
+	
+	text-align: center;
+	font-style: italic;
+	height: 50px;
+	background-color: white;
+	margin-top: 20px;
+}
+.t{
+	font-size:25px;
+
+}
+.log{
+	width: 800px;
+	height: 250px;
+	margin: 0 auto;
+	box-shadow: 0px 0px 5px 2px  #827171;
+	background-color: #19032d0e;
+}
+
+.h1{
+text-align: center;
+}
+
+.lab1{
+    font-size: 20px;
+}
+
+.control{
+	font-size: 20px;
+}
+.ad{
+	width: 700px;
+	height: 200px;
+	margin: 20px;
+	box-shadow: 0px 0px 5px 2px  #827171;
+	background-color: #19032d0e;
+}
+.inp{
+
+	text-align: center;
+
+}
+.p1{
+	text-align: center;
+	font-size: 50px;
+	font-style: oblique;
+}
+.p2{
+	font-size: 30px;
+}
+.p3{
+	font-size: 30px;
+}
+
+#sec3 {
+	width: 790px; 
+	height: 490px;
+	clear: both;
+	float: left;
+	background-color: #ECDCDC;
+	margin-left: 15px;
+	margin-right: 10px;
+}
+.inserirPiloto{
+	width: 800px;
+	height: 300px;
+	margin: 0 auto;
+	box-shadow: 0px 0px 5px 2px  #827171;
+	background-color: #19032d0e;
+}
+.recupera{
+	width: 800px;
+	height: 320px;
+	margin: 0 auto;
+	box-shadow: 0px 0px 5px 2px  #827171;
+	background-color: #19032d0e;	
+}

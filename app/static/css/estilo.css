@@ -6,6 +6,17 @@
 	font-size: 16px;
 }
 body{
+<<<<<<< HEAD
+	background-color:grey	
+}
+.cabelhoNavegacao
+{
+	height: 80px;
+	background-color: rgb(211, 50, 50);
+	box-shadow: 0px 10px 10px  #442222;		
+	font-size: 10px;
+	
+=======
 	background-color:grey
 }
 
@@ -18,6 +29,7 @@ body{
 	font-weight:bolder; 
 	
 	font-family:"Titillium Web"
+>>>>>>> main
 }
 
 .logo
@@ -83,3 +95,72 @@ font-size: 20px;
 	font-size:25px;
 
 }
+<<<<<<< HEAD
+.log{
+	width: 800px;
+	height: 250px;
+	margin: 0 auto;
+	box-shadow: 0px 0px 5px 2px  #827171;
+	background-color: #19032d0e;
+}
+
+.h1{
+text-align: center;
+}
+
+.lab1{
+    font-size: 20px;
+}
+
+.control{
+	font-size: 20px;
+}
+.ad{
+	width: 700px;
+	height: 200px;
+	margin: 20px;
+	box-shadow: 0px 0px 5px 2px  #827171;
+	background-color: #19032d0e;
+}
+.inp{
+
+	text-align: center;
+
+}
+.p1{
+	text-align: center;
+	font-size: 50px;
+	font-style: oblique;
+}
+.p2{
+	font-size: 30px;
+}
+.p3{
+	font-size: 30px;
+}
+
+#sec3 {
+	width: 790px; 
+	height: 490px;
+	clear: both;
+	float: left;
+	background-color: #ECDCDC;
+	margin-left: 15px;
+	margin-right: 10px;
+}
+.inserirPiloto{
+	width: 800px;
+	height: 300px;
+	margin: 0 auto;
+	box-shadow: 0px 0px 5px 2px  #827171;
+	background-color: #19032d0e;
+}
+.recupera{
+	width: 800px;
+	height: 320px;
+	margin: 0 auto;
+	box-shadow: 0px 0px 5px 2px  #827171;
+	background-color: #19032d0e;	
+}
+=======
+>>>>>>> main
